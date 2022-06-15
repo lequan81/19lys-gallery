@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>19 Lys Memories</title>
+    <link rel="shortcut icon" href="./images/icons/favicon.ico" />
+    <!-- <link rel="stylesheet" href="./css/style.css">-->
+    <!-- For live-server only-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css"
+    />
+    <link rel="stylesheet" href="../public/css/app.css" />
+  </head>
+  <body>
+    <h1 class="text-center font-bold text-4xl mt-2 font-Mulish">
+      19 Lys Memories
+    </h1>
+    <section class="overflow-hidden text-gray-700">
+      <div class="container mx-auto px-2 py-2 lg:px-16 lg:pt-12">
+        <div class="-m-1 flex flex-wrap md:-m-2">
+          <div class="flex flex-wrap w-1/2">
+            <div class="w-full p-1 md:p-2"></div>
+            <div class="p-1 w-1/2 md:p-2"></div>
+            <div class="p-1 w-1/2 md:p-2"></div>
+          </div>
+          <div class="flex flex-wrap w-1/2">
+            <div class="p-1 w-1/2 md:p-2"></div>
+            <div class="p-1 w-1/2 md:p-2"></div>
+            <div class="w-full p-1 md:p-2"></div>
+          </div>
+          <!-- <div class="flex flex-wrap w-1/3">
+            <div class="w-full p-1 md:p-2"></div>
+            <div class="p-1 w-1/2 md:p-2"></div>
+            <div class="p-1 w-1/2 md:p-2"></div>
+          </div> -->
+        </div>
+        
+        <div class="-m-1 flex flex-wrap md:-m-2">
+          <div class="flex flex-wrap w-1/2">
+            <div class="w-full p-1 md:p-2"></div>
+            <div class="p-1 w-1/2 md:p-2"></div>
+            <div class="p-1 w-1/2 md:p-2"></div>
+          </div>
+          <div class="flex flex-wrap w-1/2">
+            <div class="p-1 w-1/2 md:p-2"></div>
+            <div class="p-1 w-1/2 md:p-2"></div>
+            <div class="w-full p-1 md:p-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="./test.js"></script>
+    <!-- <script type="text/javascript">
+      async function loadNames() {
+        const response = await fetch(
+          "https://raw.githubusercontent.com/lequan81/19Lys-Tool/main/data/db.json"
+        );
+        const urls = await response.json();
+        console.log(urls);
+      }
+      loadNames();
+    </script> -->
+    <!-- <script type="text/javascript">
+      window.addEventListener("load", () => {
+  const getImgs = async () => {
+    await fetch("https://raw.githubusercontent.com/lequan81/19Lys-Tool/main/data.json")
+      .then((response) => response.json())
+      .then((results) => displayImgs(results.imgs));
+  };
+
+  getImgs();
+
+  const displayImgs = (imgsResult) => {
+    const img = document.createElement("img");
+
+    let portraitArr = imgsResult
+      .filter((data) => {
+        return data.direction === "portrait";
+      })
+      .map((data) => {
+        return `${data.url}`;
+      });
+    console.log(portraitArr);
+
+    let landscapeArr = imgsResult
+      .filter((data) => {
+        return data.direction === "landscape";
+      })
+      .map((data) => {
+        return `${data.url}`;
+      });
+    console.log(landscapeArr);
+
+    let i = 0;
+    portraitArr.forEach((data) => {
+      let portraitContainer = `<img src="${data}" class="block h-full w-full rounded-lg object-cover object-center">`;
+      document.getElementsByClassName("p-1 w-1/2 md:p-2")[i].innerHTML =
+        portraitContainer;
+      i++;
+    });
+
+    let x = 0;
+    landscapeArr.forEach((data) => {
+      let landscapeContainer = `<img src="${data}" class="block h-full w-full rounded-lg object-cover object-center">`;
+      document.getElementsByClassName("p-1 w-full md:p-2")[x].innerHTML =
+        landscapeContainer;
+      x++;
+    });
+  };
+});
+
+    </script> -->
+  </body>
+</html>
