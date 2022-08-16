@@ -25,10 +25,16 @@
       href="test.js"
       as="script"
     />
+    <link
+      rel="preconnect"
+      onload="this.rel = 'script'"
+      href="test.js"
+      as="script"
+    />
     <noscript>
       <link rel="shortcut icon" href="./images/icons/favicon.ico" />
       <link rel="icon" href="./images/icons/favicon.ico" />
-      <!-- <link rel="stylesheet" href="./style.css" /> -->
+      <link rel="stylesheet" href="./style.css" />
     </noscript>
     <!-- Facebook Meta Tags -->
     <meta property="og:title" content="19Lys Memories" />
@@ -67,13 +73,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css"
     /> -->
-    <link
+    <!-- <link
       rel="preload"
       onload="this.rel = 'script'"
       href="https://cdn.tailwindcss.com"
       as="script"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body class="bg-white dark:bg-gray-900">
     <div class="w-full fixed top-0 bg-white dark:bg-gray-900 py-2 md:py-4">
