@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>19 Lys Memories | Home Page</title>
     <!-- link img and script preload/prefetch -->
-    <link
+    <!-- <link
       rel="preload"
       onload="this.rel = 'stylesheet'"
       href="./style.css"
       as="style"
-    />
+    /> -->
     <link
       rel="preload"
       onload="this.rel = 'icon'"
@@ -34,7 +34,7 @@
     <noscript>
       <link rel="shortcut icon" href="./images/icons/favicon.ico" />
       <link rel="icon" href="./images/icons/favicon.ico" />
-      <link rel="stylesheet" href="./style.css" />
+      <!-- <link rel="stylesheet" href="./style.css" /> -->
     </noscript>
     <!-- Facebook Meta Tags -->
     <meta property="og:title" content="19Lys Memories" />
@@ -62,24 +62,30 @@
       name="twitter:image"
       content="https://lequan81.github.io/19lys-memories/images/icons/favicon.png"
     />
+    <!-- For live-server only-->
     <!-- <link
       rel="preload"
       onload="this.rel = 'stylesheet'"
       href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css"
       as="style"
-    /> -->
-    <!-- For live-server only-->
-    <!-- <link
+    />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css"
     /> -->
-    <!-- <link
+    <link
       rel="preload"
       onload="this.rel = 'script'"
       href="https://cdn.tailwindcss.com"
       as="script"
     />
-    <script src="https://cdn.tailwindcss.com"></script> -->
+    <link
+      rel="preconnect"
+      onload="this.rel = 'script'"
+      href="https://cdn.tailwindcss.com"
+      as="script"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-white dark:bg-gray-900">
     <div class="w-full fixed top-0 bg-white dark:bg-gray-900 py-2 md:py-4">
