@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
 
     let i = 0;
     portraitArr.forEach((data) => {
-      let portraitContainer = `<img src="${data}" class="block h-full w-full rounded-lg object-cover object-center">`;
+      let portraitContainer = `<img src="${data}" class="block h-full w-full rounded-lg object-cover object-center" alt="${data}">`;
       document.getElementsByClassName("p-1 w-1/2 md:p-2")[i].innerHTML =
         portraitContainer;
       i++;
@@ -38,7 +38,7 @@ window.addEventListener("load", () => {
 
     let x = 0;
     landscapeArr.forEach((data) => {
-      let landscapeContainer = `<img src="${data}" class="block h-full w-full rounded-lg object-cover object-center">`;
+      let landscapeContainer = `<img src="${data}" class="block h-full w-full rounded-lg object-cover object-center" alt="${data}">`;
       document.getElementsByClassName("p-1 w-full md:p-2")[x].innerHTML =
         landscapeContainer;
       x++;
