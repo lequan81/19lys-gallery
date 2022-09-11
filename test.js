@@ -1,4 +1,7 @@
+let tinhBanDieuKy = document.getElementById('tinhBanDieuKy');
+
 window.addEventListener("load", () => {
+  document.createElement("img");
   const getImgs = async () => {
     await fetch("https://raw.githubusercontent.com/lequan81/19Lys-Tool/main/data/db.json")
       .then((response) => response.json())
@@ -7,8 +10,14 @@ window.addEventListener("load", () => {
 
   getImgs();
 
+  const playMusic = () => {
+    tinhBanDieuKy.play();
+    tinhBanDieuKy.volume = 0.2;
+  };
+
+  setTimeout(playMusic, 3000);
+
   const displayImgs = (imgsResult) => {
-    const img = document.createElement("img");
 
     let portraitArr = imgsResult
       .filter((data) => {
@@ -28,20 +37,15 @@ window.addEventListener("load", () => {
       });
     console.log(landscapeArr);
 
-    let i = 0;
-    portraitArr.forEach((data) => {
-      let portraitContainer = `<img src="${data}" class="block h-full w-full rounded-lg object-cover object-center" alt="${data}">`;
-      document.getElementsByClassName("p-1 w-1/2 md:p-2")[i].innerHTML =
-        portraitContainer;
-      i++;
-    });
+    for (let i = 0; i < imgsResult.length; i++) {
 
-    let x = 0;
-    landscapeArr.forEach((data) => {
-      let landscapeContainer = `<img src="${data}" class="block h-full w-full rounded-lg object-cover object-center" alt="${data}">`;
-      document.getElementsByClassName("p-1 w-full md:p-2")[x].innerHTML =
-        landscapeContainer;
-      x++;
-    });
+      if (portraitArr[i] !== undefined || landscapeArr[i] !== undefined) {
+        let dataPortrait = portraitArr[i];
+        document.getElementsByClassName("p-1 w-1/2 md:p-2")[i].innerHTML = `<img src="${dataPortrait}" class="block h-full w-full rounded-lg object-cover object-center aspect-auto" alt="${dataPortrait}">`;
+
+        let dataLandscape = landscapeArr[i];
+        document.getElementsByClassName("p-1 w-full md:p-2")[i].innerHTML = `<img src="${dataLandscape}" class="block h-full w-full rounded-lg object-cover object-center aspect-auto" alt="${dataLandscape}">`;
+      }
+    };
   };
 });
