@@ -41,9 +41,11 @@ window.addEventListener("load", () => {
 
       if (portraitArr[i] !== undefined || landscapeArr[i] !== undefined) {
         let dataPortrait = portraitArr[i];
+        console.log(document.getElementsByClassName("p-1 w-1/2 md:p-2")[i]);
         document.getElementsByClassName("p-1 w-1/2 md:p-2")[i].innerHTML = `<img src="${dataPortrait}" class="block h-full w-full rounded-lg object-cover object-center aspect-auto" alt="${dataPortrait}">`;
 
         let dataLandscape = landscapeArr[i];
+        console.log(document.getElementsByClassName("p-1 w-full md:p-2")[i]);
         document.getElementsByClassName("p-1 w-full md:p-2")[i].innerHTML = `<img src="${dataLandscape}" class="block h-full w-full rounded-lg object-cover object-center aspect-auto" alt="${dataLandscape}">`;
       }
     };
