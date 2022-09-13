@@ -47,7 +47,7 @@
 <body class="bg-white dark:bg-gray-900">
   <Heading heading="About Us" />
   <div class="w-full overflow-hidden text-gray-700 dark:text-slate-50 pb-8 mt-6">
-    <div class="container mx-auto px-2 py-2 lg:px-4 lg:pt-12">
+    <div class="container mx-auto px-2 py-2 lg:px-4">
       <div class="flex flex-wrap">
         <div class="text-center mx-auto italic">
           <p class="ml-2 mb-3 pb-8 text-xl font-semibold">Chúng tôi, hôm nay, lòng ngập nắng…</p>
@@ -87,7 +87,19 @@
       </div>
     </div>
   </div>
+  <audio id="musicAbout"
+    src="https://mbeta.123tokyo.xyz/get.php/a/4c/D4CaSmqbtXI.mp3?cid=MTQuMTYxLjkyLjEwOHxNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTA1LjAuMC4wIFNhZmFyaS81MzcuMzZ8Vk4%3D&h=UmKsH0axeixbRJD25nXMYQ&s=1663045106&n=DI-NA-MULI-BY-ITCHYWORMS-GUITAR-COVER&dom=Iframe"
+    type="audio/mpeg"></audio>
 
+  <script type="text/javascript">
+    let musicAbout = document.getElementById('musicAbout');
+    const playMusic = () => {
+      musicAbout.play();
+      musicAbout.volume = 0.4;
+    };
+
+    setTimeout(playMusic, 3000);
+  </script>
 </body>
 <footer class="w-full fixed bottom-0 bg-slate-50 shadow text-center mx-auto p-1 dark:bg-gray-800 text-sm">
   <div class="p-1 text-center text-gray-700 dark:text-slate-50">
